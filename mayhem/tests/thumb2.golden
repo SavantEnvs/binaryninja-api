@@ -1,0 +1,13 @@
+bf00	16 nop
+f3ef 8000	32 mrs
+b510	16 push
+4770	16 bx
+2000	16 movs
+f000 b800	32 b
+e92d 41f0	32 push
+6808	16 ldr
+f8d0 1004	32 ldr
+bf18	16 it
+4408	16 add
+fb00 f001	32 mul
+ffff ffff	16 undefined

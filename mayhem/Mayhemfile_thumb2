@@ -1,0 +1,9 @@
+project: savantenvs/binaryninja-api
+target: thumb2
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/thumb2/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_thumb2
+    libfuzzer: true
+    timeout: 5

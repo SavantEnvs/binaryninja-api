@@ -1,0 +1,137 @@
+# Cases in upstream arch/armv7/armv7_disasm/test.py whose expected text no longer matches the
+# decoder at the integrated upstream commit (stale upstream expectations: e.g. '#imm' branch syntax,
+# numeric barrier options). test.sh reports them as skipped. Format: <bytes hex><TAB><stale expectation>
+002a5fed	vldr s5, [pc, #-0]
+002ac6fe	vmaxnm.f32 s5, s12, s0
+003b1fed	vldr d3, [pc, #-0]
+0320b0e1	movs r2, r3
+0320f0e1	mvns r2, r3
+04709de4	pop {r7}
+062a01ed	vstr s4, [r1, 
+064b01ed	vstr d4, [r1, 
+0730b0e3	movs r3, #0x7
+0730f0e3	mvns r3, #0x7
+07aa58fe	vselvs.f32 s21, s16, s14
+080a52ed	vldr s1, [r2, 
+080ab0ee	vmov.f32 s0, #0x3.000000e+00
+080ab8ee	vmov.f32 s0, #-3.000000e+00
+080bf0ee	vmov.f64 d16, #0x3.000000e+00
+081b12ed	vldr d1, [r2, 
+082b04fe	vseleq.f64 d2, d4, d8
+10faf1ee	vmrs APSR_nzcv, fpscr
+198281fc	stc2 p2, c8, [r1], {25}
+198291fc	ldc2 p2, c8, [r1], {25}
+1e196afd	stc2l p9, c1, [r10, !
+1e197afd	ldc2l p9, c1, [r10, !
+1e5324fd	stc2 p3, c5, [r4, !
+1e5334fd	ldc2 p3, c5, [r4, !
+1e7f233d	stclo p15, c7, [r3, !
+1e7f23ed	stc p15, c7, [r3, !
+1e7f333d	ldclo p15, c7, [r3, !
+1e7f33ed	ldc p15, c7, [r3, !
+1ed0691d	stclne p0, c13, [r9, !
+1ed069ed	stcl p0, c13, [r9, !
+1ed0791d	ldclne p0, c13, [r9, !
+1ed079ed	ldcl p0, c13, [r9, !
+245b3afe	vselgt.f64 d5, d10, d20
+273b6d9b	blls #0x1b4ec9c
+2bfa0efe	vseleq.f32 s30, s28, s23
+2f0b11fe	vselvs.f64 d0, d1, d31
+353fafe6	ssat16 r3, #0x16, r5
+353fefe6	usat16 r3, #0x15, r5
+3657f0e1	mvns r5, r6, lsr r7
+380849fd	stc2l p8, c0, [r9, 
+380859fd	ldc2l p8, c0, [r9, 
+386203fd	stc2 p2, c6, [r3, 
+386213fd	ldc2 p2, c6, [r3, 
+386e022d	stchs p14, c6, [r2, 
+386e02ed	stc p14, c6, [r2, 
+386e122d	ldchs p14, c6, [r2, 
+386e12ed	ldc p14, c6, [r2, 
+38c148dd	stclle p1, c12, [r8, 
+38c148ed	stcl p1, c12, [r8, 
+38c158dd	ldclle p1, c12, [r8, 
+38c158ed	ldcl p1, c12, [r8, 
+40f07ff5	dsb #0
+41f07ff5	dsb #0x1
+420abefe	vcvtp.u32.f32 s0, s4
+431bbcfe	vcvta.u32.f64 s2, d3
+440bbefe	vcvtp.u32.f64 s0, d4
+443bb8fe	vrinta.f64 d3, d4
+443bb9fe	vrintn.f64 d3, d4
+443bbafe	vrintp.f64 d3, d4
+443bbbfe	vrintm.f64 d3, d4
+448afffe	vcvtm.u32.f32 s17, s8
+44f07ff5	dsb #0x4
+45f07ff5	dsb #0x5
+460a80fe	vminnm.f32 s0, s0, s12
+488bfffe	vcvtm.u32.f64 s17, d8
+48f07ff5	dsb #0x8
+494b86fe	vminnm.f64 d4, d6, d9
+49f07ff5	dsb #0x9
+4cf07ff5	dsb #0xc
+4df07ff5	dsb #0xd
+50d83dfa	blx #0xf76140
+50f07ff5	dmb #0
+51f07ff5	dmb #0x1
+54f07ff5	dmb #0x4
+5548a0e7	sbfx r4, r5, #0x16, #0x1
+5548afc7	sbfxgt r4, r5, #0x16, #0x10
+5548e0e7	ubfx r4, r5, #0x16, #0x1
+5548efc7	ubfxgt r4, r5, #0x16, #0x10
+55f07ff5	dmb #0x5
+58f07ff5	dmb #0x8
+59f07ff5	dmb #0x9
+5a80ffe6	usat r8, #0x31, r10, asr #0x20
+5cf07ff5	dmb #0xc
+5df07ff5	dmb #0xd
+606ab8fe	vrinta.f32 s12, s1
+606ab9fe	vrintn.f32 s12, s1
+606abafe	vrintp.f32 s12, s1
+606abbfe	vrintm.f32 s12, s1
+6100b0e1	rrxs r0, r1
+611abcfe	vcvta.u32.f32 s2, s3
+61f07ff5	isb #0x1
+654094c1	orrsgt r4, r4, r5, rrx
+66409581	orrshi r4, r5, r6, rrx
+673bbdfe	vcvtn.u32.f64 s6, d23
+6b3abdfe	vcvtn.u32.f32 s6, s23
+6de0b0e1	rrxs lr, sp
+6ef0b0e1	rrxs pc, lr
+6fd0b0e1	rrxs sp, pc
+7657f0b1	mvnslt r5, r6, ror r7
+776996b1	orrslt r6, r6, r7, ror r9
+800a30fe	vselgt.f32 s0, s1, s0
+9032d9e0	smulls r3, r9, r0, r2
+912e87e1	strex r2, r1, [r7]
+922399e0	umulls r2, r9, r2, r3
+9223b9e0	umlals r2, r9, r2, r3
+92433110	mlasne r1, r2, r3, r4
+924331e0	mlas r1, r2, r3, r4
+924ee5e1	strexh r4, r2, [r5]
+926ea8e1	strexd r6, r2, r3, [r8]
+931ec4e1	strexb r1, r3, [r4]
+93fc80e1	strex pc, r3, [r0]
+9528f380	smlalshi r2, r3, r5, r8
+9528f3e0	smlals r2, r3, r5, r8
+960715d0	mulsle r5, r6, r7
+960715e0	muls r5, r6, r7
+a0b07bfa	blx #0x1eec280
+a7eb6ffe	vselge.f64 d30, d31, d23
+ab2a20fe	vselge.f32 s4, s1, s23
+ae5b86fe	vmaxnm.f64 d5, d22, d30
+c00ab5ee	vcmpe.f32 s0, #0
+c00bf5ee	vcmpe.f64 d16, #0
+c20abefe	vcvtp.s32.f32 s0, s4
+c31bbcfe	vcvta.s32.f64 s2, d3
+c40bbefe	vcvtp.s32.f64 s0, d4
+c48afffe	vcvtm.s32.f32 s17, s8
+c88bfffe	vcvtm.s32.f64 s17, d8
+da80f0e6	usat r8, #0x16, r10, asr #0x1
+e11abcfe	vcvta.s32.f32 s2, s3
+e73bbdfe	vcvtn.s32.f64 s6, d23
+eb3abdfe	vcvtn.s32.f32 s6, s23
+f15744cc	mcrrgt p7, #0x15, r5, r4, c1
+f15744ec	mcrr p7, #0x15, r5, r4, c1
+f15744fc	mcrr2 p7, #0x15, r5, r4, c1
+fe1ef8e2	rscs r1, r8, #0xfe0

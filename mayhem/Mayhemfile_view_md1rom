@@ -1,0 +1,9 @@
+project: savantenvs/binaryninja-api
+target: view_md1rom
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/view_md1rom/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_view_md1rom
+    libfuzzer: true
+    timeout: 10

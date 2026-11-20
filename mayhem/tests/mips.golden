@@ -1,0 +1,15 @@
+5 14E00003	bnez $a3, 0x10
+5 8ca40000	lw $a0, ($a1)
+5 0c1001dc	jal 0x400770
+5 2c410020	sltiu $at, $v0, 0x20
+5 00c74824	and $t1, $a2, $a3
+5 3c1c0042	lui $gp, 0x42
+5 03e00008	jr $ra
+6 64a5fff0	daddiu $a1, $a1, -0x10
+6 dca40008	ld $a0, 0x8($a1)
+5 00000000	nop
+5 27bdffe0	addiu $sp, $sp, -0x20
+5 afbf001c	sw $ra, 0x1c($sp)
+5 10400005	beqz $v0, 0x18
+6 0000103c	dsll32 $v0, $zero, 0
+5 ffffffff	sd $ra, -0x1($ra)

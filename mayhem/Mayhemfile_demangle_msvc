@@ -1,0 +1,9 @@
+project: savantenvs/binaryninja-api
+target: demangle_msvc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/demangle_msvc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_demangle_msvc
+    libfuzzer: true
+    timeout: 5

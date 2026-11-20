@@ -1,0 +1,12 @@
+_Z1fv	1 f
+_ZN9wikipedia7article8print_toERSo	1 wikipedia::article::print_to
+_ZNSt6vectorIiSaIiEE9push_backERKi	1 std::vector<int32_t>::push_back
+_ZNKSt8functionIFvRKN5boost6system10error_codeEEEclES5_	1 std::function<void (boost::system::error_code const&)>::operator()
+_Z3fooILi3EEvRAT__i	1 foo<3>
+_ZN3FooC2Ev	1 Foo::Foo
+_ZN3FooD0Ev	1 Foo::~Foo
+_ZN5Outer5InnerIcE3getEv	1 Outer::Inner<char>::get
+_ZNSt3mapISsiSt4lessISsESaISt4pairIKSsiEEEixERS3_	1 std::map<std::string, int32_t>::operator[]
+_ZN2ns1fEPFviE	1 ns::f
+not_mangled	0 FAIL
+_Z	1 FAIL

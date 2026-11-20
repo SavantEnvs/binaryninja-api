@@ -1,0 +1,12 @@
+?x@@3HA	1 x
+?foo@@YAHH@Z	1 foo
+??0Foo@@QEAA@XZ	1 Foo::Foo
+?bar@Baz@@QAEXPAD@Z	1 Baz::bar
+?func@@YAXV?$vector@HV?$allocator@H@std@@@std@@@Z	1 func
+?f@@YAXPEAUS@@@Z	1 f
+??1Foo@Bar@@UAE@XZ	1 Bar::Foo::~Foo
+?Get@?$Box@H@@QBEHXZ	1 Box<int32_t>::Get
+??_R0?AVFoo@@@8	1 class Foo `RTTI Type Descriptor'
+?g@N@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z	1 N::g
+not_mangled	0 FAIL
+?	1 FAIL

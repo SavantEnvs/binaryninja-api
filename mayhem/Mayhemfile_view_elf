@@ -1,0 +1,9 @@
+project: savantenvs/binaryninja-api
+target: view_elf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/view_elf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_view_elf
+    libfuzzer: true
+    timeout: 10

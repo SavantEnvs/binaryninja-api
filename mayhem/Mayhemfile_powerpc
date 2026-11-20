@@ -1,0 +1,9 @@
+project: savantenvs/binaryninja-api
+target: powerpc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/powerpc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_powerpc
+    libfuzzer: true
+    timeout: 5
